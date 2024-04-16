@@ -1,11 +1,225 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Varela+Round&display=swap");
 
 :root {
-    --primary-color: #06899F;
+  --primary-color: #06899f;
+}
+
+body {
+  background: #f2f2f2;
+  margin: 0;
+  font-family: "Nunito";
+}
+
+.navbar {
+  background: white;
+  padding: 0.6em;
+}
+
+.navbar .logo {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: 1.2em;
+  padding-bottom: 0.2em;
+}
+
+.navbar .logo span {
+  color: var(--primary-color);
+}
+
+.navbar .memoji {
+  width: 30px;
+  position: relative;
+  top: 5px;
+}
+
+.navbar nav {
+  display: none;
+}
+
+.navbar .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: space-between;
+}
+
+.navbar .mobile-menu {
+  cursor: pointer;
+  padding-right: 1em;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a :visited {
+  color: #ae00ff;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: -2em;
+}
+
+.hero {
+  text-align: center;
+  padding: 1em 1em 5em 1em;
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+
+  .mobile-menu,
+  .mobile-menu-exit {
+    display: none;
   }
-  
-  body {
-    background: #f2f2f2;
+
+  .navbar .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 180px auto;
+    grid-template-columns: 180px auto;
+  }
+
+  .navbar nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background: none;
+    position: unset;
+    height: auto;
+    width: 90%;
+    padding: 0;
+  }
+
+  .navbar nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .navbar nav a {
+    color: black;
+    font-size: 1em;
+    padding: 0.6em 1em;
+  }
+
+  .navbar nav ul.primary-nav {
     margin: 0;
-    font-family: 'Nunito';
   }
+
+  .navbar nav li.current a {
+    font-weight: bold;
+  }
+
+  .policy {
+    text-align: center;
+    padding: 2em 1em 5em 1em;
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .terms {
+    text-align: center;
+    padding: 2em 1em 5em 1em;
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
+@media only screen and (min-width: 1080px) {
+  .container {
+    width: 1080px;
+    margin: 0 auto;
+  }
+
+  .hero .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .hero .container .left-col {
+    margin: 3em 3em 0 5em;
+  }
+
+  .hero .container .left-col h1 {
+    font-size: 3em;
+    width: 90%;
+  }
+
+  .iphone-img-1 {
+    width: 30;
+    margin-right: 8em;
+  }
+
+  .iphone-img-2 {
+    width: 30;
+    margin-right: 8em;
+  }
+
+  .hero-app-store {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .left-list {
+    margin: 3em 3em 0 3em;
+  }
+
+  .features-section .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  ul.features-list li {
+    font-size: 1.5em;
+  }
+
+  ul.features-list li:before {
+    width: 30px;
+    height: 30px;
+  }
+
+  .contact-section {
+    position: relative;
+  }
+
+  .contact-section .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .contact-right {
+    position: absolute;
+    right: 0;
+    top: 1em;
+    width: 45%;
+    height: 100%;
+    padding-bottom: 1em;
+  }
+
+}
