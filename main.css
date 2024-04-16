@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Varela+Round&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,15 +11,17 @@
   margin: 0 auto;
   padding: 20px;
 }
+
 h1 {
   color: #333;
-  font-family: Arial, sans-serif;
-  font-size: 36px;
+  font-family: 'Nunito';
+  font-size: 24px;
   text-align: center;
 }
+
 p {
   color: #666;
-  font-family: Arial, sans-serif;
+  font-family: 'Nunito';
   font-size: 18px;
   line-height: 1.5;
   margin: 10px 0;
