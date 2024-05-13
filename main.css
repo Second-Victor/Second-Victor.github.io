@@ -19,7 +19,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 33px 9%;
+  padding: 30px 10%;
   background: transparent;
 }
 
@@ -72,4 +72,33 @@ header {
 .icons i:hover{
   color: #777777;
   transform: translateY(-4px);
+}
+
+
+
+@media (max-width: 990px){
+  #menu-icon{
+      display: block;
+  }
+  .navlist{
+      position: absolute;
+      top: 80%;
+      right: -100%;
+      width: 120px;
+      height: 14vh;
+      background: #aaaaaa;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px 10px;
+      transition: all .55s ease;
+  }
+  .navlist a{
+      margin-left: 0;
+      display: block;
+      margin: 7px 0;
+  }
+  .navlist.open{
+      right: 0
+  }
 }
