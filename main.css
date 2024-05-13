@@ -7,6 +7,10 @@
   text-decoration: none;
 }
 
+html {
+  background: linear-gradient(245.59deg, #f0f1f0 0%, #d1d1d1 28.53%, #bababa 75.52%);
+}
+
 header {
   position: fixed;
   right: 0;
@@ -55,16 +59,20 @@ header {
   height: 100%;
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(245.59deg, #f0f1f0 0%, #d1d1d1 28.53%, #bababa 75.52%);
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 2rem;
+  margin-top: 40px;
 }
 
 section {
-  padding: 0 19%;
+  padding: 0 15%;
+}
+
+.hero-text {
+margin-top: 50px;
 }
 
 .hero-text h1 {
@@ -72,7 +80,6 @@ section {
   font-size: 90px;
   line-height: 1;
   color: black;
-  margin: 0 0 45px;
 }
 
 .hero-text h4 {
@@ -82,15 +89,15 @@ section {
   margin-bottom: 10px;
 }
 
-.hero-text h5 {
-  font-size: 14px;
-  font-weight: 400;
+.hero-text p {
   color: black;
-  margin-bottom: 40px;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 100px;
 }
+
 .hero-img img {
-  width: 200px;
-  height: auto;
+  width: 150px;
 }
 
 .icons {
@@ -114,9 +121,38 @@ section {
 }
 
 
+@media (max-width: 990px){
+  #menu-icon{
+      display: block;
+  }
+  .navlist{
+      position: absolute;
+      top: 100%;
+      right: -100%;
+      width: 160px;
+      height: 25vh;
+      background: #aaaaaa;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 50px 20px;
+      transition: all .55s ease;
+  }
+  .navlist a{
+      margin-left: 0;
+      display: block;
+      margin: 7px 0;
+  }
+  .navlist.open{
+      right: 0
+  }
+}
+
 @media (max-width: 680px){
   .hero-img img{
       width: 100px;
-     
+  }
+  .logo {
+    font-size: 24px
   }
 }
