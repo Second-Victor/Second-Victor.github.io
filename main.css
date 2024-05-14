@@ -5,10 +5,13 @@
   text-decoration: none;
 }
 
+:root {
+  --primary-color: #696969;
+}
+
 body {
   height: 100%;
-  background-color: rgb(242, 242, 242);
-  /* background: linear-gradient(245.59deg, #f0f1f0 0%, #d1d1d1 28.53%, #bababa 75.52%); */
+  background-color: #f2f2f2;
 }
 
 header {
@@ -20,15 +23,30 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 10%;
-  background: transparent;
+  padding: 0px 5%;
   background-color: white;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a :visited {
+  color: #ae00ff;
+  text-decoration: none;
 }
 
 .logo{
   font-size: 24px;
   font-weight: 700;
   color: black;
+}
+
+.memoji {
+  width: 30px;
+  position: relative;
+  top: 5px;
 }
 
 .navlist {
@@ -54,6 +72,83 @@ header {
   z-index: 10001;
   cursor: pointer;
   display: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 1em 1em 5em 1em;
+}
+
+.left-col .subhead {
+  font-weight: 800;
+  font-size: 3em;
+  position: relative;
+}
+
+.left-col .then-icon-img {
+  width: 50px;
+  position: relative;
+  left: 2px;
+}
+
+.left-col h1 {
+  font-size: 2.5em;
+  line-height: 1.3em;
+  margin-top: .2em;
+}
+
+.policy {
+  text-align: center;
+  padding: 2em 1em 5em 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.terms {
+  text-align: center;
+  padding: 2em 1em 5em 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.iphone-img-1 {
+  width: 300px;
+  margin-top: 2em;
+}
+
+.iphone-img-2 {
+  width: 300px;
+  margin-top: 2em;
+}
+
+.features-section {
+  background: #20272e;
+  color: white;
+  text-align: center;
+  padding: 3em 1em 5em 1em;
+}
+
+.features-section ul.features-list {
+  margin: 0 auto;
+  text-align: left;
+  display: table;
+}
+
+.features-section ul.features-list li {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+  position: relative;
+}
+
+.features-section ul.features-list li:before {
+  content: '';
+  left: -2em;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/bullet.svg");
+  background-size: contain;
+  margin-right: 0.5em;
 }
 
 .icons {
@@ -102,4 +197,70 @@ header {
   .navlist.open{
       right: 0
   }
+}
+
+@media only screen and (min-width: 1080px) {
+  .container {
+    width: 1080px;
+    margin: 0 auto;
+  }
+
+  .hero .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .hero .container .left-col {
+    margin: 3em 3em 0 5em;
+  }
+
+  .hero .container .left-col h1 {
+    font-size: 3em;
+    width: 90%;
+  }
+
+  .iphone-img-1 {
+    width: 30;
+    margin-right: 8em;
+  }
+
+  .iphone-img-2 {
+    width: 30;
+    margin-left: 8em;
+  }
+
+  .hero-app-store {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .right-list {
+    margin: 3em 3em 0 3em;
+  }
+
+  .features-section .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  ul.features-list li {
+    font-size: 1.5em;
+  }
+
+  ul.features-list li:before {
+    width: 30px;
+    height: 30px;
+  }
+
 }
