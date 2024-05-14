@@ -7,7 +7,8 @@
 
 body {
   height: 100%;
-  background: linear-gradient(245.59deg, #f0f1f0 0%, #d1d1d1 28.53%, #bababa 75.52%);
+  background-color: rgb(242, 242, 242);
+  /* background: linear-gradient(245.59deg, #f0f1f0 0%, #d1d1d1 28.53%, #bababa 75.52%); */
 }
 
 header {
@@ -19,12 +20,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 10%;
+  padding: 10px 10%;
   background: transparent;
+  background-color: white;
 }
 
 .logo{
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 700;
   color: black;
 }
@@ -76,17 +78,16 @@ header {
 
 
 
-@media (max-width: 990px){
+@media (max-width: 800px){
   #menu-icon{
       display: block;
   }
   .navlist{
       position: absolute;
-      top: 80%;
+      top: 70%;
       right: -100%;
       width: 120px;
       height: 14vh;
-      background: #aaaaaa;
       display: flex;
       align-items: center;
       flex-direction: column;
