@@ -9,7 +9,7 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: #f2f2f2;
+  background-color: lightgray;
 }
 
 /* Header styling */
@@ -23,18 +23,13 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0px 5%;
-  background-color: white;
+  background-color: lightgray;
 }
 .logo{
   font-size: 24px;
   font-weight: 700;
   padding: 10px;
   color: black;
-}
-.memoji {
-  width: 30px;
-  position: relative;
-  top: 5px;
 }
 
 /* Navlist styling */
@@ -62,8 +57,7 @@ header {
 
 /* Footer styling */
 footer.contact-section {
-  background-color: #333;
-  color: #fff;
+  background-color: lightgray;
   padding: 20px;
   position: fixed;
   bottom: 0;
@@ -73,46 +67,19 @@ footer.contact-section {
   align-items: center;
 }
 .contact-icons a {
-  color: #fff;
+  color: #444;
   margin: 0 10px;
   text-decoration: none;
   font-size: 20px;
   transition: color 0.3s;
 }
 .contact-icons a:hover {
-  color: #ddd;
+  color: #888;
 }
-.contact-section .text a {
-  color: #fff;
-  margin: 0;
+.text a {
+  color: #444;
+  margin-left: 20px;
   font-size: 14px;
   font-weight: 500;
 }
 
-/* reactive layouts */
-@media (max-width: 800px){
-  #menu-icon{
-      display: block;
-  }
-  .navlist{
-      position: absolute;
-      top: 80%;
-      right: -100%;
-      width: 120px;
-      height: 14vh;
-      background: #aaaaaa;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      padding: 20px 10px;
-      transition: all .55s ease;
-  }
-  .navlist a{
-      margin-left: 0;
-      display: block;
-      margin: 7px 0;
-  }
-  .navlist.open{
-      right: 0
-  }
-}
