@@ -5,15 +5,14 @@
   text-decoration: none;
 }
 
-:root {
-  --primary-color: #696969;
-}
-
-body {
+body, html {
+  margin: 0;
+  padding: 0;
   height: 100%;
   background-color: #f2f2f2;
 }
 
+/* Header styling */
 header {
   position: fixed;
   right: 0;
@@ -26,33 +25,22 @@ header {
   padding: 0px 5%;
   background-color: white;
 }
-
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-}
-
-a :visited {
-  color: #ae00ff;
-  text-decoration: none;
-}
-
 .logo{
   font-size: 24px;
   font-weight: 700;
+  padding: 10px;
   color: black;
 }
-
 .memoji {
   width: 30px;
   position: relative;
   top: 5px;
 }
 
+/* Navlist styling */
 .navlist {
   display: flex;
 }
-
 .navlist a {
   color: black;
   margin-left: 60px;
@@ -61,11 +49,9 @@ a :visited {
   border-bottom: 2px solid transparent;
   transition: all .55s ease;
 }
-
 .navlist a:hover {
   border-bottom: 2px solid black;
 }
-
 #menu-icon {
   color: black;
   font-size: 35px;
@@ -74,115 +60,47 @@ a :visited {
   display: none;
 }
 
-.hero {
-  text-align: center;
-  padding: 1em 1em 5em 1em;
+/* Footer styling */
+footer.contact-section {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact-icons a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+.contact-icons a:hover {
+  color: #ddd;
+}
+.contact-section .text a {
+  color: #fff;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
 }
 
-.left-col .subhead {
-  font-weight: 800;
-  font-size: 3em;
-  position: relative;
-}
-
-.left-col .then-icon-img {
-  width: 50px;
-  position: relative;
-  left: 2px;
-}
-
-.left-col h1 {
-  font-size: 2.5em;
-  line-height: 1.3em;
-  margin-top: .2em;
-}
-
-.policy {
-  text-align: center;
-  padding: 2em 1em 5em 1em;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.terms {
-  text-align: center;
-  padding: 2em 1em 5em 1em;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.iphone-img-1 {
-  width: 300px;
-  margin-top: 2em;
-}
-
-.iphone-img-2 {
-  width: 300px;
-  margin-top: 2em;
-}
-
-.features-section {
-  background: #20272e;
-  color: white;
-  text-align: center;
-  padding: 3em 1em 5em 1em;
-}
-
-.features-section ul.features-list {
-  margin: 0 auto;
-  text-align: left;
-  display: table;
-}
-
-.features-section ul.features-list li {
-  font-size: 1.1em;
-  margin-bottom: 1em;
-  position: relative;
-}
-
-.features-section ul.features-list li:before {
-  content: '';
-  left: -2em;
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-image: url("../images/bullet.svg");
-  background-size: contain;
-  margin-right: 0.5em;
-}
-
-.icons {
-  position: absolute;
-  top: 90%;
-  padding: 0 9%;
-  transform: translateY(-50%);
-}
-
-.icons i {
-  display: block;
-  margin: 20px 0;
-  font-size: 24px;
-  color: black;
-  transition: all .50s ease;
-}
-
-.icons i:hover{
-  color: #777777;
-  transform: translateY(-4px);
-}
-
-
-
+/* reactive layouts */
 @media (max-width: 800px){
   #menu-icon{
       display: block;
   }
   .navlist{
       position: absolute;
-      top: 70%;
+      top: 80%;
       right: -100%;
       width: 120px;
       height: 14vh;
+      background: #aaaaaa;
       display: flex;
       align-items: center;
       flex-direction: column;
@@ -197,70 +115,4 @@ a :visited {
   .navlist.open{
       right: 0
   }
-}
-
-@media only screen and (min-width: 1080px) {
-  .container {
-    width: 1080px;
-    margin: 0 auto;
-  }
-
-  .hero .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    text-align: left;
-  }
-
-  .hero .container .left-col {
-    margin: 3em 3em 0 5em;
-  }
-
-  .hero .container .left-col h1 {
-    font-size: 3em;
-    width: 90%;
-  }
-
-  .iphone-img-1 {
-    width: 30;
-    margin-right: 8em;
-  }
-
-  .iphone-img-2 {
-    width: 30;
-    margin-left: 8em;
-  }
-
-  .hero-app-store {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-
-  .right-list {
-    margin: 3em 3em 0 3em;
-  }
-
-  .features-section .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    text-align: left;
-  }
-
-  ul.features-list li {
-    font-size: 1.5em;
-  }
-
-  ul.features-list li:before {
-    width: 30px;
-    height: 30px;
-  }
-
 }

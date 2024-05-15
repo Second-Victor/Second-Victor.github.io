@@ -6,14 +6,14 @@ menu.onclick = () => {
     navlist.classList.toggle('open');
 };
 
-const sr = ScrollReveal ({
+/* const sr = ScrollReveal ({
     distance: '90px',
     duration: 2600,
     delay: 450,
     reset: true
-});
+}); */
 
 /* sr.reveal('.hero-text',{delay: 200, origin: 'top'});
-sr.reveal('.hero-img',{delay: 350, origin: 'top'}); */
+sr.reveal('.hero-img',{delay: 350, origin: 'top'});
 sr.reveal('.icons',{delay: 500, origin: 'left'});
-/* sr.reveal('.appstore-img',{delay: 600, origin: 'right'}); */
+sr.reveal('.appstore-img',{delay: 600, origin: 'right'}); */
