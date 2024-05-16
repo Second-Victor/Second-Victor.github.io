@@ -1,3 +1,11 @@
+/* https://colorhunt.co/palette/22283131363f76abaeeeeeee */
+:root {
+  --header-color: #222831;
+  --background-color: #31363F;
+  --link-color: #76ABAE;
+  --text-color: #EEEEEE;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Nunito", sans-serif;
@@ -5,16 +13,16 @@
   text-decoration: none;
 }
 
+
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: lightgray;
+  background-color: var(--background-color);
 }
 
 /* Header styling */
 header {
-  position: fixed;
   right: 0;
   top: 0;
   z-index: 1000;
@@ -23,13 +31,13 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0px 5%;
-  background-color: lightgray;
+  background: var(--header-color);
 }
 .logo{
   font-size: 24px;
   font-weight: 700;
   padding: 10px;
-  color: black;
+  color: var(--text-color);
 }
 
 /* Navlist styling */
@@ -37,7 +45,7 @@ header {
   display: flex;
 }
 .navlist a {
-  color: black;
+  color: var(--text-color);
   margin-left: 60px;
   font-size: 15px;
   font-weight: 600;
@@ -45,29 +53,59 @@ header {
   transition: all .55s ease;
 }
 .navlist a:hover {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--text-color);
 }
 #menu-icon {
-  color: black;
+  color: var(--text-color);
   font-size: 35px;
   z-index: 10001;
   cursor: pointer;
   display: none;
 }
 
+.policy {
+  text-align: center;
+  padding: 5em 1em 5em 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.policy h1 {
+  color: var(--text-color);
+}
+.policy h2 {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: -20px;
+}
+.policy p {
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+p a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+p a:hover {
+  color: #91c9cd;
+  text-decoration: underline;
+}
+
 /* Footer styling */
 footer.contact-section {
-  background-color: lightgray;
   padding: 20px;
-  position: fixed;
+  position: static;
   bottom: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--header-color);
 }
 .contact-icons a {
-  color: #444;
+  color: var(--text-color);
   margin: 0 10px;
   text-decoration: none;
   font-size: 20px;
@@ -77,7 +115,7 @@ footer.contact-section {
   color: #888;
 }
 .text a {
-  color: #444;
+  color: var(--text-color);
   margin-left: 20px;
   font-size: 14px;
   font-weight: 500;
