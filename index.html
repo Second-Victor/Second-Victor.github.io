@@ -1,47 +1,60 @@
-<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>SecondVictor</title>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SecondVictor</title>
 
-		<!-- custom css link -->
-		<link rel="stylesheet" href="/main.css">
+	<!-- custom css link -->
+	<link rel="stylesheet" href="/styles.css">
 
-		<!-- box icons link -->
-		<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+	<!-- google fonts link -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigi>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
 
-		<!-- remixicons link -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
-
-		<!-- google fonts link -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigi>
-		<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-  	</head>
-	<body>
-		<div class="wrapper">
-			<header>
-				<a href="/" class="logo">SecondVictor</a>
-				<ul class="navlist">
-					<li><a href="/">Home</a></li>
-					<li><a href="/public/apps.html">Apps</a></li>
-					<li><a href="/public/about.html">About</a></li>
-				</ul>
-			</header>
-		<div class="content">
-
-
+	<header>
+		<div class="logo">
+			<h1>Second<span>Victor</span></h1>
 		</div>
-			<footer class="contact-section">
-				<div class="text">
-					<a href="/">SecondVictor Ltd</a>
-				</div>
-				<div class="contact-icons">
-					<a href="mailto:secondvictor@icloud.com"><i class="ri-mail-fill"></i></a>
-					<a href="https://github.com/Second-Victor"><i class="ri-github-fill"></i></a>
-				</div>
-		  	</footer>
-		</div>
-	</body>
+	</header>
+
+	<div class="container">
+			<aside class="sidebar">
+				<nav>
+					<ul>
+						<li><a href="#">Archive</a></li>
+						<li><a href="#">Projects</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="mailto:secondvictor@icloud.com">Mail</a></li>
+						<li><a href="https://github.com/Second-Victor">Github</a></li>
+					</ul>
+				</nav>
+			</aside>
+
+			<!--  content  -->
+
+			<main class="content">
+				<article>
+					<h2>Instagram Cofounder Mike Krieger Joins Anthropic as Chief Product Officer</h2>
+					<p>Mike Krieger:</p>
+					<blockquote>
+						<p>Anthropic’s research continues to be at the forefront of AI. When paired with thoughtful product development, I [see] tons of potential to positively impact how people and companies get their work done. And as a two time entrepreneur, I’m particularly excited by how Claude, along with the right scaffolding and product features, can empower more people to innovate at a faster pace and at a lower cost.</p>
+					</blockquote>
+					<p>Tangentially related: Anthropic shipped a native iOS Claude app two weeks ago.</p>
+				</article>
+			</main>
+
+			<!--  content end  -->
+
+	</div>
+
+	<!--- scroll reveal effect --->
+	<script src="https://unpkg.com/scrollreveal"></script>
+
+	<!--- custom java script link --->
+	<script src="public/js/script.js"></script>
+
+</body>
 </html>
