@@ -2,7 +2,7 @@ const sr = ScrollReveal ({
 	distance: '90px',
 	duration: 2000,
 	delay: 450,
-	reset: false
+	reset: true
 });
 
 sr.reveal('.logo',{delay: 200, origin: 'top'});
