@@ -40,7 +40,7 @@ header .logo {
 .sidebar {
   width: 25%;
   background-color: var(--background-color);
-  padding: 20px 20px 20px 4px;
+  padding: 10px 20px 20px 4px;
   box-sizing: border-box;
 }
 
@@ -74,12 +74,18 @@ header .logo {
 }
 
 .content article {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.content article h1 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .content article h2 {
   font-size: 13px;
-  font-weight: 300;
+  font-weight: 500;
   margin-bottom: 10px;
 }
 
