@@ -110,6 +110,7 @@ header .logo a {
 .content article .date {
   font-size: 12px;
   color: var(--blockquote);
+  margin-top: -6px;
 }
 
 .content article blockquote {
