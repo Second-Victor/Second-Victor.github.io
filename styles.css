@@ -120,6 +120,12 @@ header .logo a {
   color: var(--blockquote);
 }
 
+.content article a {
+  font-size: 12px;
+  color: var(--link-color);
+  text-decoration: none;
+}
+
 /* POLICY */
 .content .policy div {
   display: flex;
