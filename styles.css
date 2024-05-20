@@ -15,6 +15,7 @@ body {
   display: flex;
 }
 
+
 /* HEADER */
 header {
   background-color: var(--background-color);
@@ -23,6 +24,7 @@ header {
 }
 header h1 {
   font-size: 20px;
+  font-weight: 700;
 }
 header h1 span {
   color: var(--link-color);
@@ -43,7 +45,7 @@ header .logo a {
 .sidebar {
   width: 25%;
   background-color: var(--background-color);
-  padding: 10px 20px 20px 4px;
+  padding: 18px 20px 20px 4px;
   box-sizing: border-box;
 }
 .sidebar nav ul {
@@ -57,7 +59,7 @@ header .logo a {
 .sidebar nav ul li a {
   color: var(--text-color);
   text-decoration: none;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
 }
 .sidebar nav ul li a:hover {
@@ -73,33 +75,29 @@ header .logo a {
   padding: 20px;
   box-sizing: border-box;
 }
-.content article h1 span {
+.content article h2 span {
   color: var(--link-color);
 }
 .content article {
   margin-bottom: 40px;
 }
-.content article h1 {
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-.content article h1 a {
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
 .content article h2 {
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.content article h2 a {
+  font-size: 16px;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 .content article p {
   margin-bottom: 10px;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 400;
 }
 .content article .date {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--blockquote);
   margin-top: -6px;
 }
@@ -110,7 +108,8 @@ header .logo a {
   color: var(--blockquote);
 }
 .content article a {
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 400;
   color: var(--link-color);
   text-decoration: none;
 }
@@ -122,7 +121,8 @@ header .logo a {
 
 /* THEN SPECIFIC */
 #then-list li {
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 500;
   margin-bottom: 6px;
 }
 #wrap-image {
@@ -135,6 +135,8 @@ header .logo a {
   display: block;
   margin-bottom: 10px;
   margin-left: 20px;
+  font-size: 13px;
+  font-weight: 500;
 }
  #link-container img {
    margin-bottom: 10px;
@@ -151,11 +153,11 @@ header .logo a {
   width: 30px;
   margin-right: 10px;
 }
-.content .policy h1 {
+.content .policy h2 {
   font-size: 16px;
   font-weight: 600;
 }
-.content .policy h2 {
+.content .policy h3 {
   font-size: 14px;
   font-weight: 600;
   margin-bottom: -10px;
