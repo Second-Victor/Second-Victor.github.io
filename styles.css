@@ -221,51 +221,7 @@ a:focus, button:focus {
 
 
 /* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-  header {
-    padding: 30px 20px 0 20px;
-  }
-
-  header h1 {
-    margin: 0;
-  }
-
-  .container {
-    flex-direction: column;
-  }
-
-  header .logo {
-    justify-content: center;
-    margin: 0;
-  }
-
-  .sidebar {
-    width: 100%;
-    padding: 0 20px;
-  }
-
-  .sidebar nav ul {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-  }
-
-  .sidebar nav ul li {
-    margin: 5px 10px;
-  }
-
-  .content {
-    width: 100%;
-    max-width: none;
-    padding: 25px 35px;
-  }
-
-  #wrap-image {
-    width: 50px;
-  }
-}
+/* Mobile styles removed - desktop layout used on all screen sizes */
 
 
 /* PRINT STYLES */
