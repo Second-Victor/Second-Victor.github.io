@@ -3,7 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>SecondVictor</title>
+	<title>When.. - iOS Event Tracking App by SecondVictor</title>
+	<meta name="description" content="When.. is an iOS app for logging exactly when and where events in your life happen. Track important moments with exact time and location. Made with Swift and SwiftUI.">
+
+	<!-- Open Graph tags -->
+	<meta property="og:title" content="When.. - iOS Event Tracking App">
+	<meta property="og:description" content="Keep track of all your events with exact time and location. iOS exclusive app made with Swift and SwiftUI.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://secondvictor.com/public/projects/when/when.html">
+	<meta property="og:image" content="https://secondvictor.com/public/img/when-icon.png">
+
+	<!-- Canonical URL -->
+	<link rel="canonical" href="https://secondvictor.com/public/projects/when/when.html">
+
+	<!-- Favicon -->
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
 
 	<!-- custom css link -->
 	<link rel="stylesheet" href="/styles.css">
@@ -11,11 +25,11 @@
 	<!-- google fonts link -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
-
+	<a href="#main-content" class="skip-link">Skip to main content</a>
 	<header>
 		<div class="logo">
 			<h1><a href="/">Second<span> Victor</span></a></h1>
@@ -28,14 +42,15 @@
 					<ul>
 						<li><a href="/">Home</a></li>
 						<li><a href="/public/projects/projects.html">Projects</a></li>
+						<li><a href="/public/archive.html">Archive</a></li>
 						<li><a href="/public/about.html">About</a></li>
-						<li><a href="mailto:allan@secondvictor.com"><img src="/public/img/envelope.svg" alt="envelope"></a></li>
+						<li><a href="mailto:allan@secondvictor.com" aria-label="Email allan@secondvictor.com"><img src="/public/img/envelope.svg" alt="" role="presentation"></a></li>
 					</ul>
 				</nav>
 			</aside>
 			<!--  content  -->
 
-			<main class="content">
+			<main class="content" id="main-content">
 				<article>
 					<h2><a href="/public/projects/when/when.html">When..</a></h2>
 
@@ -43,7 +58,7 @@
 
 					<p>Know exactly when and where the things that matter to you took place..</p>
 
-					<p><a href="/public/projects/when/when.html"><img src="/public/img/when-icon.png" alt="icon image" id="wrap-image"></a> When.. is an app for logging exactly when and where you were as an event in your life happens. This can be for something really mundane like what time did you feed the goldfish or even for important events like saving the details of a car accident location etc.</p>
+					<p><a href="/public/projects/when/when.html"><img src="/public/img/when-icon.png" alt="icon image" id="wrap-image" loading="lazy"></a> When.. is an app for logging exactly when and where you were as an event in your life happens. This can be for something really mundane like what time did you feed the goldfish or even for important events like saving the details of a car accident location etc.</p>
 
 					<p>The app makes it easy to add an event and log your location. You also get the option to add notes or even multiple times and locations to the same event.</p>
 
@@ -59,8 +74,10 @@
 					</div>
 
 					<div id="link-container">
-						<img src="/public/img/app-store-badge-blk.svg" alt="app store icon">
-						<a href="/public/projects/when/when-terms.html">Terms &amp, Conditions</a>
+						<a href="https://apps.apple.com/gb/app/when/id6702031839" target="_blank" rel="noopener">
+						<img src="/public/img/app-store-badge-blk.svg" alt="Download When.. on the App Store" loading="lazy">
+					</a>
+						<a href="/public/projects/when/when-terms.html">Terms &amp; Conditions</a>
 						<a href="/public/projects/when/when-policy.html">Privacy Policy</a>
 					</div>
 				</article>
@@ -73,7 +90,7 @@
 	<script src="https://unpkg.com/scrollreveal"></script>
 
 	<!-- custom java script link -->
-	<script src="public/js/script.js"></script>
+	<script src="/public/js/script.js"></script>
 
 </body>
 </html>
