@@ -136,6 +136,27 @@ a:focus, button:focus {
   color: var(--link-color);
   text-decoration: none;
 }
+.content article ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+.content article li {
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+.content .archive-link {
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+.content .archive-link a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+.content .archive-link a:hover {
+  color: var(--link-color);
+}
 .container {
   display: flex;
   align-items: flex-start;
@@ -143,6 +164,9 @@ a:focus, button:focus {
 
 
 /* WHEN SPECIFIC */
+#when-list {
+  padding-left: 20px;
+}
 #when-list li {
   font-size: 13px;
   font-weight: 500;
@@ -154,17 +178,18 @@ a:focus, button:focus {
   width: 70px;
   height: auto;
 }
+#link-container {
+  margin-left: 0;
+}
 #link-container a {
   display: block;
   margin-bottom: 10px;
-  margin-left: 20px;
   font-size: 13px;
   font-weight: 500;
 }
- #link-container img {
-   margin-bottom: 10px;
-   margin-left: 20px;
- }
+#link-container img {
+  margin-bottom: 10px;
+}
 
 
 /* TERMS AND POLICY */
@@ -198,7 +223,11 @@ a:focus, button:focus {
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
   header {
-    padding: 30px 20px 15px 20px;
+    padding: 30px 20px 0 20px;
+  }
+
+  header h1 {
+    margin: 0;
   }
 
   .container {
@@ -207,12 +236,12 @@ a:focus, button:focus {
 
   header .logo {
     justify-content: center;
-    margin-right: 0;
+    margin: 0;
   }
 
   .sidebar {
     width: 100%;
-    padding: 10px 20px;
+    padding: 0 20px;
   }
 
   .sidebar nav ul {
@@ -230,7 +259,7 @@ a:focus, button:focus {
   .content {
     width: 100%;
     max-width: none;
-    padding: 15px;
+    padding: 25px 35px;
   }
 
   #wrap-image {
