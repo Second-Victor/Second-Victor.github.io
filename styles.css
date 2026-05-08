@@ -104,6 +104,11 @@ a:focus, button:focus {
 .content article {
   margin-bottom: 40px;
 }
+.content article::after {
+  content: "";
+  display: block;
+  clear: both;
+}
 .content article h2 {
   font-size: 16px;
   font-weight: 600;
@@ -164,15 +169,18 @@ a:focus, button:focus {
 
 
 /* WHEN SPECIFIC */
-#when-list {
+#when-list,
+.project-list {
   padding-left: 20px;
 }
-#when-list li {
+#when-list li,
+.project-list li {
   font-size: 13px;
   font-weight: 500;
   margin-bottom: 6px;
 }
-#wrap-image {
+#wrap-image,
+.wrap-image {
   float: left;
   margin-right: 10px;
   width: 70px;
