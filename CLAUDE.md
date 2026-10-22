@@ -54,10 +54,12 @@ Navigation: Home | Projects | Archive | About | Email
 
 ### Typography
 - Font: Nunito (Google Fonts, weights 400/500/600/700)
-- Body: 13px, Headings: 16px, Site title: 20px
+- Body: 16px (line-height 1.6), Headings: 18px, Site title: 22px, Nav: 15px
 
 ### Responsive
-Mobile breakpoint at 768px - switches to single column layout.
+Page is centred at max 880px. Below 640px the layout stacks: logo, nav as one row, then content.
+
+The current section in the nav is marked with `aria-current="page"` on each page (project pages mark Projects).
 
 ## Adding a New Blog Post
 

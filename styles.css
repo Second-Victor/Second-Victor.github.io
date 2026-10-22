@@ -4,6 +4,9 @@
   --link-color: #ee481c;
   --text-color: #053220;
   --blockquote: #053220a6;
+  --page-width: 880px;
+  --sidebar-width: 25%;
+  --gutter: 24px;
 }
 
 *, *::before, *::after {
@@ -12,15 +15,18 @@
 
 body {
   font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
   background-color: var(--background-color);
   color: var(--text-color);
   margin: 0;
+  -webkit-text-size-adjust: 100%;
 }
 
 /* SKIP LINK */
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: -100px;
   left: 0;
   background: var(--link-color);
   color: white;
@@ -34,24 +40,40 @@ body {
 }
 
 
+/* PAGE */
+/* Header and container share a width so the logo lines up with the nav */
+body > header,
+body > .container {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+body > .container {
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 60px;
+}
+
+
 /* HEADER */
-header {
-  background-color: var(--background-color);
-  padding: 20px;
-  text-align: center;
-}
-header h1 {
-  font-size: 20px;
-  font-weight: 700;
-}
-header h1 span {
-  color: var(--link-color);
+body > header {
+  padding-top: 48px;
 }
 header .logo {
   display: flex;
-  align-items: center;
-  justify-content: right;
-  margin-right: 10px;
+  justify-content: flex-end;
+  width: var(--sidebar-width);
+  padding-right: var(--gutter);
+}
+header h1 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 36px;
+  white-space: nowrap;
+}
+header h1 span {
+  color: var(--link-color);
 }
 header .logo a {
   color: var(--text-color);
@@ -61,28 +83,32 @@ header .logo a {
 
 /* SIDEBAR */
 .sidebar {
-  width: 25%;
-  background-color: var(--background-color);
-  padding: 18px 20px 20px 4px;
-  box-sizing: border-box;
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+  padding-right: var(--gutter);
 }
 .sidebar nav ul {
   list-style: none;
+  margin: 0;
   padding: 0;
   text-align: right;
 }
 .sidebar nav ul li {
-  margin: 8px 20px;
+  margin-bottom: 6px;
 }
 .sidebar nav ul li a {
   color: var(--text-color);
   text-decoration: none;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
 }
-.sidebar nav ul li a:hover {
-  text-decoration: underline;
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a[aria-current="page"] {
   color: var(--link-color);
+}
+.sidebar nav img {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* FOCUS INDICATORS */
@@ -93,16 +119,20 @@ a:focus, button:focus {
 
 /* CONTENT */
 .content {
-  width: 70%;
-  max-width: 600px;
-  padding: 20px;
-  box-sizing: border-box;
+  flex: 1;
+  min-width: 0;
+  max-width: 620px;
+  padding-left: var(--gutter);
 }
-.content article h2 span {
+.content a {
   color: var(--link-color);
+  text-decoration: none;
+}
+.content a:hover {
+  text-decoration: underline;
 }
 .content article {
-  margin-bottom: 40px;
+  margin-bottom: 56px;
 }
 .content article::after {
   content: "";
@@ -110,24 +140,24 @@ a:focus, button:focus {
   clear: both;
 }
 .content article h2 {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0 0 6px;
 }
-.content article h2 a {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 10px;
+.content article * + h2 {
+  margin-top: 32px;
+}
+.content article h2 span {
+  color: var(--link-color);
 }
 .content article p {
-  margin-bottom: 10px;
-  font-size: 13px;
-  font-weight: 400;
+  margin: 0 0 14px;
 }
 .content article .date {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--blockquote);
-  margin-top: -6px;
+  margin-bottom: 16px;
 }
 .content article blockquote {
   border-left: 1px solid var(--blockquote);
@@ -135,68 +165,38 @@ a:focus, button:focus {
   margin-left: 0;
   color: var(--blockquote);
 }
-.content article a {
-  font-size: 13px;
-  font-weight: 400;
-  color: var(--link-color);
-  text-decoration: none;
-}
 .content article ul {
-  margin: 15px 0;
+  margin: 0 0 16px;
   padding-left: 20px;
 }
 .content article li {
-  font-size: 13px;
-  font-weight: 400;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 .content .archive-link {
-  font-size: 13px;
   font-weight: 600;
-  margin-top: 30px;
 }
 .content .archive-link a {
   color: var(--text-color);
-  text-decoration: none;
 }
 .content .archive-link a:hover {
   color: var(--link-color);
 }
-.container {
-  display: flex;
-  align-items: flex-start;
-}
 
 
-/* WHEN SPECIFIC */
-#when-list,
-.project-list {
-  padding-left: 20px;
-}
-#when-list li,
-.project-list li {
-  font-size: 13px;
-  font-weight: 500;
-  margin-bottom: 6px;
-}
+/* PROJECT PAGES */
 #wrap-image,
 .wrap-image {
   float: left;
-  margin-right: 10px;
+  margin: 4px 14px 6px 0;
   width: 70px;
   height: auto;
 }
-#link-container {
-  margin-left: 0;
-}
 #link-container a {
   display: block;
-  margin-bottom: 10px;
-  font-size: 13px;
-  font-weight: 500;
+  margin-bottom: 8px;
 }
 #link-container img {
-  margin-bottom: 10px;
+  margin: 8px 0;
 }
 
 
@@ -204,32 +204,60 @@ a:focus, button:focus {
 .content .policy div {
   display: flex;
   align-items: center;
+  margin-bottom: 14px;
+}
+.content .policy div h2 {
+  margin: 0;
 }
 .content .policy div img {
   width: 30px;
   margin-right: 10px;
 }
-.content .policy h2 {
-  font-size: 16px;
-  font-weight: 600;
-}
 .content .policy h3 {
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: -10px;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 28px 0 6px;
 }
 .content .policy p {
-  color: var(--text-color);
-  margin-bottom: 20px;
-}
-.content .policy a {
-  color: var(--link-color);
-  text-decoration: none;
+  margin-bottom: 14px;
 }
 
 
 /* RESPONSIVE DESIGN */
-/* Mobile styles removed - desktop layout used on all screen sizes */
+/* Phones: logo, then nav as one row, then content, all left-aligned */
+@media (max-width: 640px) {
+  body > header {
+    padding-top: 32px;
+  }
+  header .logo {
+    width: auto;
+    justify-content: flex-start;
+    padding-right: 0;
+  }
+  header h1 {
+    margin-bottom: 16px;
+  }
+  body > .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    padding-right: 0;
+  }
+  .sidebar nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 20px;
+    text-align: left;
+  }
+  .sidebar nav ul li {
+    margin: 0;
+  }
+  .content {
+    padding: 32px 0 0;
+  }
+}
 
 
 /* PRINT STYLES */
@@ -241,6 +269,7 @@ a:focus, button:focus {
   .content {
     width: 100%;
     max-width: none;
+    padding: 0;
   }
 
   a {
