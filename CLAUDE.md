@@ -21,10 +21,12 @@ This is a static website for SecondVictor (Allan Davis' independent iOS app deve
     ├── img/            # Images and SVG assets
     └── projects/
         ├── projects.html           # Projects listing
-        └── when/
-            ├── when.html           # When.. app page
-            ├── when-terms.html     # Terms and conditions
-            └── when-policy.html    # Privacy policy
+        ├── when/
+        │   ├── when.html           # When.. app page
+        │   ├── when-terms.html     # Terms and conditions
+        │   └── when-policy.html    # Privacy policy
+        ├── downward/               # Downward app page, terms and policy
+        └── done/                   # Done.. app page, terms and policy (linked from the app's About screen)
 ```
 
 ## Layout
