@@ -87,7 +87,7 @@ body {
   column-gap: 24px;
   align-items: center;
   font-family: var(--mono);
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.65;
   background: var(--bg);
   color: var(--fg);
@@ -377,7 +377,7 @@ header .logo a::after {
 }
 .content .policy h3 {
   margin: 32px 0 8px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
 }
 .content .policy h3::before {
@@ -407,7 +407,7 @@ header .logo a::after {
 }
 .home .comment {
   margin: 0;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
   color: var(--faint);
 }
