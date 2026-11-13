@@ -34,13 +34,10 @@
         <!-- custom css link -->
         <link rel="stylesheet" href="/styles.css" />
 
-        <!-- google fonts link -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap"
-            rel="stylesheet"
-        />
+        <meta name="color-scheme" content="light dark" />
+        <!-- theme: apply a saved choice before the page paints -->
+        <script>try{var t=localStorage.getItem("sv-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+        <script src="/public/js/sv.js" defer></script>
     </head>
     <body>
         <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -79,59 +76,196 @@
             </aside>
             <!--  content  -->
 
-            <main class="content" id="main-content">
+            <main class="content home" id="main-content">
                 <!--
-                === NEW BLOG POST TEMPLATE ===
-                1. Move the current article below to archive.html (at the top of posts)
-                2. Replace it with your new post using this template:
-
-                <article>
-                    <h2>Title Here</h2>
-                    <p class="date">1st January 2025</p>
-                    <p>First paragraph...</p>
-                    <p>More paragraphs as needed...</p>
-                    <p>Allan.</p>
-                </article>
-
-                To link to a project, use:
-                <h2><a href="/public/projects/when/when.html">When..</a> title here</h2>
-                ==============================
+                === ADDING A NEW POST ===
+                1. Write the full post at the top of /public/archive.html,
+                   with an id like  <article id="post-2027-01-31">
+                2. Add a line at the top of the "done" lines below (under the
+                   (A) line), linking to /public/archive.html#post-2027-01-31.
+                   Tags: +Project for an app, @Context for anything else.
+                   Bump the numbers in <span class="n">, and the summary
+                   in .file-status if you like (the script recounts anyway).
+                3. Change the (A) "next up" line whenever you start something new.
+                =========================
                 -->
 
-                <article>
-                    <h2>
-                        <a href="/public/projects/downward/downward.html">Downward</a>
-                        and
-                        <a href="/public/projects/done/done.html">Done..</a>
-                        are out now!
-                    </h2>
-
-                    <p class="date">8th November 2026</p>
-
-                    <p>
-                        Downward and Done.. are both out now on the App Store,
-                        and both have versions for iOS, iPadOS and macOS.
-                        Downward is now on version 1.1.
+                <section class="hero">
+                    <p class="comment"># Second Victor</p>
+                    <h2>Independent apps for<br />iPhone, iPad and Mac.</h2>
+                    <p class="lede">
+                        One developer in the UK, making small, focused apps.
                     </p>
+                    <a class="next" href="/public/projects/dinkus/dinkus.html"
+                        ><span class="mark">(A)</span>
+                        <span>next up: Dinkus, a plain text editor</span>
+                        <span class="arrow" aria-hidden="true">→</span></a
+                    >
+                </section>
 
-                    <p>
-                        <a href="https://apps.apple.com/gb/app/downward/id6761651950"
-                            >Download Downward on the App Store</a
-                        >.
-                    </p>
+                <section class="log" aria-labelledby="log-title" data-log>
+                    <div class="section-head">
+                        <h2 id="log-title" class="comment"># what's been done</h2>
+                        <span class="hint" data-js hidden>tap a +project or @context to filter</span>
+                    </div>
 
-                    <p>
-                        <a href="https://apps.apple.com/gb/app/id6827168389"
-                            >Download Done.. on the App Store</a
-                        >.
-                    </p>
+                    <div class="file">
+                        <div class="file-bar">
+                            <div class="left">
+                                <span class="file-name">todo.txt</span>
+                                <label class="grep" data-js hidden>
+                                    <span aria-hidden="true">/</span>
+                                    <input type="search" placeholder="grep" autocomplete="off" spellcheck="false" aria-label="Search posts" data-grep />
+                                </label>
+                            </div>
+                            <div class="tools" data-js hidden>
+                                <button type="button" class="btn" aria-pressed="false" data-hide-done>hide done</button>
+                                <div class="seg" role="group" aria-label="View">
+                                    <button type="button" aria-pressed="true" data-view="pretty">pretty</button>
+                                    <button type="button" aria-pressed="false" data-view="raw">raw</button>
+                                </div>
+                            </div>
+                        </div>
 
-                    <p>Allan.</p>
-                </article>
+                        <div class="tag-bar" role="group" aria-label="Filter by tag" data-js hidden></div>
 
-                <p class="archive-link">
-                    <a href="/public/archive.html">Older posts</a>
-                </p>
+                        <ol class="lines">
+                            <li class="open">
+                                <span class="n" aria-hidden="true">1</span>
+                                <span class="mark">(A)</span>
+                                <span class="body">
+                                    <time datetime="2026-11-13">2026-11-13</time>
+                                    <a class="title" href="/public/projects/dinkus/dinkus.html">Ship Dinkus to the App Store</a>
+                                    <span class="line-tags"><span class="tag proj">+Dinkus</span> <span class="tag ctx">@soon</span></span>
+                                </span>
+                            </li>
+                            <li class="done">
+                                <span class="n" aria-hidden="true">2</span>
+                                <span class="mark">x</span>
+                                <span class="body">
+                                    <time datetime="2026-11-08">2026-11-08</time>
+                                    <a class="title" href="/public/archive.html#post-2026-11-08">Downward and Done.. are out now!</a>
+                                    <span class="line-tags"><span class="tag proj">+Downward</span> <span class="tag proj">+Done</span> <span class="tag ctx">@AppStore</span></span>
+                                </span>
+                            </li>
+                            <li class="done">
+                                <span class="n" aria-hidden="true">3</span>
+                                <span class="mark">x</span>
+                                <span class="body">
+                                    <time datetime="2026-10-22">2026-10-22</time>
+                                    <a class="title" href="/public/archive.html#post-2026-10-22">Downward is out now!</a>
+                                    <span class="line-tags"><span class="tag proj">+Downward</span> <span class="tag ctx">@AppStore</span></span>
+                                </span>
+                            </li>
+                            <li class="done">
+                                <span class="n" aria-hidden="true">4</span>
+                                <span class="mark">x</span>
+                                <span class="body">
+                                    <time datetime="2026-05-08">2026-05-08</time>
+                                    <a class="title" href="/public/archive.html#post-2026-05-08">Downward the minimal markdown editor is near!</a>
+                                    <span class="line-tags"><span class="tag proj">+Downward</span></span>
+                                </span>
+                            </li>
+                            <li class="done">
+                                <span class="n" aria-hidden="true">5</span>
+                                <span class="mark">x</span>
+                                <span class="body">
+                                    <time datetime="2025-12-07">2025-12-07</time>
+                                    <a class="title" href="/public/archive.html#post-2025-12-07">When.. gets a massive update!</a>
+                                    <span class="line-tags"><span class="tag proj">+When</span></span>
+                                </span>
+                            </li>
+                            <li class="done">
+                                <span class="n" aria-hidden="true">6</span>
+                                <span class="mark">x</span>
+                                <span class="body">
+                                    <time datetime="2025-09-24">2025-09-24</time>
+                                    <a class="title" href="/public/archive.html#post-2025-09-24">When.. is updated...</a>
+                                    <span class="line-tags"><span class="tag proj">+When</span></span>
+                                </span>
+                            </li>
+                            <li class="done">
+                                <span class="n" aria-hidden="true">7</span>
+                                <span class="mark">x</span>
+                                <span class="body">
+                                    <time datetime="2025-02-05">2025-02-05</time>
+                                    <a class="title" href="/public/archive.html#post-2025-02-05">When.. is done...</a>
+                                    <span class="line-tags"><span class="tag proj">+When</span> <span class="tag ctx">@AppStore</span></span>
+                                </span>
+                            </li>
+                            <li class="done">
+                                <span class="n" aria-hidden="true">8</span>
+                                <span class="mark">x</span>
+                                <span class="body">
+                                    <time datetime="2024-11-18">2024-11-18</time>
+                                    <a class="title" href="/public/archive.html#post-2024-11-18">When.. is nearly finished</a>
+                                    <span class="line-tags"><span class="tag proj">+When</span></span>
+                                </span>
+                            </li>
+                            <li class="done">
+                                <span class="n" aria-hidden="true">9</span>
+                                <span class="mark">x</span>
+                                <span class="body">
+                                    <time datetime="2024-05-17">2024-05-17</time>
+                                    <a class="title" href="/public/archive.html#post-2024-05-17">Second Victor website is now live</a>
+                                    <span class="line-tags"><span class="tag proj">+Site</span></span>
+                                </span>
+                            </li>
+                        </ol>
+
+                        <div class="raw" data-raw hidden></div>
+
+                        <p class="empty" data-empty hidden>
+                            <span>no lines match.</span>
+                            <button type="button" class="btn" data-clear>clear filters</button>
+                        </p>
+
+                        <div class="file-status">
+                            <span data-summary>9 lines · 8 done · 1 open</span>
+                            <span>UTF-8 · LF · the format <a href="/public/projects/done/done.html">Done..</a> reads</span>
+                        </div>
+                    </div>
+
+                    <a class="more" href="/public/archive.html">all posts in the archive →</a>
+                </section>
+
+                <section class="apps" aria-labelledby="apps-title">
+                    <h2 id="apps-title" class="comment"># apps</h2>
+                    <ul>
+                        <li>
+                            <a class="name" href="/public/projects/when/when.html">When..</a>
+                            <span class="desc">Log when things happened, and where.</span>
+                            <span class="links">
+                                <a class="store" href="https://apps.apple.com/gb/app/when/id6702031839">App Store ↗</a>
+                                <a href="/public/projects/when/when.html" aria-label="More about When..">more →</a>
+                            </span>
+                        </li>
+                        <li>
+                            <a class="name" href="/public/projects/downward/downward.html">Downward</a>
+                            <span class="desc">Minimal Markdown editor for local files and iCloud Drive.</span>
+                            <span class="links">
+                                <a class="store" href="https://apps.apple.com/gb/app/downward/id6761651950">App Store ↗</a>
+                                <a href="/public/projects/downward/downward.html" aria-label="More about Downward">more →</a>
+                            </span>
+                        </li>
+                        <li>
+                            <a class="name" href="/public/projects/done/done.html">Done..</a>
+                            <span class="desc">A task list on a todo.txt file you control.</span>
+                            <span class="links">
+                                <a class="store" href="https://apps.apple.com/gb/app/id6827168389">App Store ↗</a>
+                                <a href="/public/projects/done/done.html" aria-label="More about Done..">more →</a>
+                            </span>
+                        </li>
+                        <li>
+                            <a class="name" href="/public/projects/dinkus/dinkus.html">Dinkus</a>
+                            <span class="desc">Plain text editor with just enough highlighting.</span>
+                            <span class="links">
+                                <span class="soon">@soon</span>
+                                <a href="/public/projects/dinkus/dinkus.html" aria-label="More about Dinkus">more →</a>
+                            </span>
+                        </li>
+                    </ul>
+                </section>
             </main>
 
             <!--  content end  -->
