@@ -87,7 +87,7 @@ body {
   column-gap: 24px;
   align-items: center;
   font-family: var(--mono);
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.65;
   background: var(--bg);
   color: var(--fg);
@@ -340,6 +340,24 @@ header .logo a::after {
   margin: 4px 16px 8px 0;
   border-radius: 22.5%;
 }
+/* images that swap with the theme: .only-light shows in light mode, .only-dark in dark */
+.only-dark {
+  display: none;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .only-light {
+    display: none;
+  }
+  :root:not([data-theme="light"]) .only-dark {
+    display: inline;
+  }
+}
+:root[data-theme="dark"] .only-light {
+  display: none;
+}
+:root[data-theme="dark"] .only-dark {
+  display: inline;
+}
 .content article p > a:has(.wrap-image) {
   text-decoration: none;
 }
@@ -377,7 +395,7 @@ header .logo a::after {
 }
 .content .policy h3 {
   margin: 32px 0 8px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
 }
 .content .policy h3::before {
@@ -407,7 +425,7 @@ header .logo a::after {
 }
 .home .comment {
   margin: 0;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
   color: var(--faint);
 }
@@ -769,17 +787,6 @@ button.tag {
   align-items: baseline;
   gap: 16px;
 }
-.apps .links a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  margin: -12px 0;
-  color: var(--dim);
-}
-.home .apps .links .store {
-  color: var(--proj);
-  font-weight: 700;
-}
 .apps .soon {
   color: var(--ctx);
 }
@@ -830,6 +837,79 @@ button.tag {
   }
   .empty {
     padding-left: 16px;
+  }
+
+  /* todo.txt on a phone: fewer controls, and each line as title over date + tags */
+  .section-head .hint,
+  .file-bar .seg,
+  .lines .n,
+  .file-status span + span {
+    display: none;
+  }
+  .file-bar {
+    padding: 10px 12px;
+  }
+  .file-bar .left {
+    display: contents;
+  }
+  .file-bar .file-name {
+    order: 1;
+  }
+  .file-bar .tools {
+    order: 2;
+    margin-left: auto;
+  }
+  .file-bar .grep {
+    order: 3;
+    flex: 1 1 100%;
+  }
+  .tag-bar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px 12px;
+    scrollbar-width: none;
+  }
+  .tag-bar::-webkit-scrollbar {
+    display: none;
+  }
+  .tag-bar .chip,
+  .tag-bar .clear {
+    flex: none;
+  }
+  .lines {
+    padding: 0;
+  }
+  .lines li {
+    gap: 0;
+    padding: 12px;
+  }
+  .lines li + li {
+    border-top: 1px solid var(--line);
+  }
+  .lines .mark {
+    width: 32px;
+  }
+  .lines .body {
+    gap: 0 10px;
+  }
+  .lines .title {
+    order: 1;
+    flex: 1 1 100%;
+  }
+  .lines time {
+    order: 2;
+    font-size: 12px;
+  }
+  .line-tags {
+    order: 3;
+    gap: 0 6px;
+  }
+  .lines .tag {
+    padding: 0 2px;
+    font-size: 12px;
+  }
+  .file-status {
+    padding: 8px 12px;
   }
 }
 
